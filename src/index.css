@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #CD9856;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EE972D;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(228, 228, 228, 0.5);
+}
+
+body{
+  background-image: url('/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center
+}
+
+.progress-container {
+  @apply w-full bg-gray-100 rounded-full h-4;
+}
+
+.progress-bar {
+  @apply bg-amber-500 h-4 rounded-full;
+  animation: progressAnimation 5s linear forwards;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
